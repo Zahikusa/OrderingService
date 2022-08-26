@@ -9,13 +9,13 @@ public class Order {
 
     // constructor for creating/saving new Orders
     public Order(String clientId, String productName, Integer quantity) {
+        // TODO: Check how to handle orderId, which should only be set once SQL has generated it (auto increment)
         this.clientId = clientId;
         this.productName = productName;
         this.quantity = quantity;
         this.state = State.RUNNING;
     }
 
-    // Constructor for SQL fetching
     public Order(Integer orderId, String clientId, String productName, Integer quantity, State state) {
         this.orderId = orderId;
         this.clientId = clientId;

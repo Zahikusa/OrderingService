@@ -12,7 +12,8 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "/api/order")
 public class OrderController {
-    // TODO: Add error handling
+    // TODO: Add error handling, e.g. with a central ErrorHandlerIntercepter
+    // TODO: Add logic to check if order has finished and handle state (delivered, cancelled)
 
     private final OrderService orderService;
     private final AuthService authService;

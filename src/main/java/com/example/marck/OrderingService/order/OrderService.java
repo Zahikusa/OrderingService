@@ -1,6 +1,7 @@
 package com.example.marck.OrderingService.order;
 
 import com.example.marck.OrderingService.order.models.Order;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -13,8 +14,10 @@ import java.util.List;
 @Service
 public class OrderService {
     // TODO: Debug why DB initialization is not working
+
     private final JdbcTemplate jtm;
 
+    @Autowired
     public OrderService(JdbcTemplate jtm) {
         this.jtm = jtm;
     }
