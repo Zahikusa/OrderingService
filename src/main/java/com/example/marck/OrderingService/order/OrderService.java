@@ -12,7 +12,7 @@ import java.util.List;
 
 @Service
 public class OrderService {
-
+    // TODO: Debug why DB initialization is not working
     private final JdbcTemplate jtm;
 
     public OrderService(JdbcTemplate jtm) {
